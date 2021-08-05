@@ -6,11 +6,11 @@ import changeDateReducer from './changeDateReducer';
 import changeFilterReducer from './changeFilterReducer';
 
 const rootReducer = combineReducers({
-    units: getUnitReducer,
-    measurements: getMeasurementsReducer,
-    values: addValueReducer,
-    date: changeDateReducer,
-    filters: changeFilterReducer,
-})
+  units: getUnitReducer,
+  measurements: getMeasurementsReducer,
+  values: addValueReducer,
+  date: changeDateReducer,
+  filters: changeFilterReducer,
+});
 
 export default rootReducer;
