@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { nowLoggedin } from '../sessions/sessions';
 import Home from './Home';
-import AddValue from './AddValue';
+import AddMeasurement from './AddMeasurement';
 import Prog from './Prog';
 import {
   getUnits, getAllMeasurements, addValue, changeDate, changeFilter,
@@ -35,7 +35,7 @@ const PrivateRoutePaths = (props) => {
           exact
           path="/add"
           render={() => (
-            <AddValue
+            <AddMeasurement
               units={units}
               values={values}
               getUnits={getUnits}
