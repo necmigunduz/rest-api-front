@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import PrivateRoutes from './containers/PrivateRoutes';
+import PrivateRoutes from './containers/PrivateRoutePaths';
 import Login from './components/Login';
 import TopNav from './components/TopNav';
 import Footer from './components/Footer';

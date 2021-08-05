@@ -18,7 +18,7 @@ const login = async (name, password, endpoint) => {
   return response;
 };
 
-const isLoggedin = () => {
+const nowLoggedin = () => {
   if (localStorage.token) return true;
   return false;
 };
@@ -27,4 +27,4 @@ const logout = () => {
   localStorage.clear();
 };
 
-export { login, isLoggedin, logout };
+export { login, nowLoggedin, logout };
