@@ -1,8 +1,22 @@
+import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import PrivateRoutes from './containers/PrivateRoutes';
+import Login from './components/Login';
+import TopNav from './components/TopNav';
+import Footer from './components/Footer';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Hello</h1>
-    </div>
+    <>
+      <BrowserRouter>
+        <TopNav />
+        <Switch>
+          <Route exact path={['/users/login', '/users/sign-up']} component={Login} />
+          <PrivateRoutes />
+        </Switch>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 

@@ -18,13 +18,13 @@ const login = async (name, password, endpoint) => {
   return response;
 };
 
-const isLoggedIn = () => {
+const isLoggedin = () => {
   if (localStorage.token) return true;
   return false;
 };
 
-const logOut = () => {
+const logout = () => {
   localStorage.clear();
 };
 
-export { login, isLoggedIn, logOut };
+export { login, isLoggedin, logout };

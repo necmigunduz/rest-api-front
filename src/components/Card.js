@@ -1,0 +1,37 @@
+import PropTypes from 'prop-types';
+
+const Card = (props) => {
+  const {
+    id, title, submitHandler, changeCardHandler, value,
+  } = props;
+
+  const handleSubmit = (e, id) => {
+    submitHandler(e.target.previousSibling.id, id);
+  };
+
+  const handleCardChange = (e) => {
+    changeCardHandler(e.target.id, e.target.value);
+  };
+
+  return (
+    <div className="add-card flex space-between align-center m-b-20 p-l-10 p-r-10">
+      <div className="color-gray medium input-title flex">{title}</div>
+      <input className="input" id={title} type="number" placeholder="0" value={value} onChange={(e) => handleCardChange(e)} />
+      <button className="submit-button color-dark-gray medium" type="submit" onClick={(e) => handleSubmit(e, id)}>+</button>
+    </div>
+  );
+};
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  value: PropTypes.string,
+  submitHandler: PropTypes.func.isRequired,
+  changeCardHandler: PropTypes.func.isRequired,
+};
+
+Card.defaultProps = {
+  value: '',
+};
+
+export default Card;
