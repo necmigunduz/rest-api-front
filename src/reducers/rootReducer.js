@@ -10,7 +10,7 @@ const rootReducer = combineReducers({
   measurements: getMeasurementsReducer,
   values: addValueReducer,
   date: changeDateReducer,
-  filters: changeFilterReducer,
+  filter: changeFilterReducer,
 });
 
 export default rootReducer;
