@@ -10,7 +10,7 @@ const Login = () => {
   const location = useLocation();
   const path = location.pathname.split('/')[2];
 
-  const signUp = path !== 'auth/login';
+  const signUp = path !== 'login';
   const submitValue = signUp ? 'Sign Up' : 'Login';
   const endpoint = signUp ? 'signup' : 'auth/login';
   const validatePassword = signUp ? <input className="field m-b-20 background-blue color-white" id="rPassword" type="password" placeholder="reapeat password" /> : <div />;
