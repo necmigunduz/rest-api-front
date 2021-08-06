@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Card = (props) => {
   const {
-    id, title, submitHandler, changeCardHandler, value,
+    id, title, submitHandler, changeHandler, value,
   } = props;
 
   const handleSubmit = (e, id) => {
@@ -10,7 +10,7 @@ const Card = (props) => {
   };
 
   const handleChange = (e) => {
-    changeCardHandler(e.target.id, e.target.value);
+    changeHandler(e.target.id, e.target.value);
   };
 
   return (
@@ -27,7 +27,7 @@ Card.propTypes = {
   title: PropTypes.string.isRequired,
   value: PropTypes.string,
   submitHandler: PropTypes.func.isRequired,
-  changeCardHandler: PropTypes.func.isRequired,
+  changeHandler: PropTypes.func.isRequired,
 };
 
 Card.defaultProps = {
