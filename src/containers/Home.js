@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { fetchAllMeasurements } from '../logic/api';
-import { loadToken } from '../localStorage/localStorage';
+import { loadToken } from '../localStorage/storage';
 import MainInfo from '../components/Info';
 import Nutrient from '../components/Nutrients';
 import newDate, { getMonths } from '../leapYear/leapYear';

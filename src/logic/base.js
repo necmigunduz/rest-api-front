@@ -1,3 +1,3 @@
-const baseURL = 'https://tracking-rest-api-back.herokuapp.com/';
+const baseURL = 'http://localhost:3001';
 
 export default baseURL;

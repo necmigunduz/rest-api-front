@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { fetchUnits, saveMeasurements } from '../logic/api';
-import { loadToken } from '../localStorage/localStorage';
+import { loadToken } from '../localStorage/storage';
 import Card from '../components/Card';
 
 const AddMeasurement = (props) => {

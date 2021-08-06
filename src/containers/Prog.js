@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import PropTypes from 'prop-types';
-import { loadToken } from '../localStorage/localStorage';
+import { loadToken } from '../localStorage/storage';
 import { fetchAllMeasurements } from '../logic/api';
 import { getMonths } from '../leapYear/leapYear';
 import { measurementUnits, options } from '../filters/filters';
