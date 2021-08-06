@@ -9,14 +9,14 @@ const Card = (props) => {
     submitHandler(e.target.previousSibling.id, id);
   };
 
-  const handleCardChange = (e) => {
+  const handleChange = (e) => {
     changeCardHandler(e.target.id, e.target.value);
   };
 
   return (
     <div className="add-card flex space-between align-center m-b-20 p-l-10 p-r-10">
       <div className="color-gray medium input-title flex">{title}</div>
-      <input className="input" id={title} type="number" placeholder="0" value={value} onChange={(e) => handleCardChange(e)} />
+      <input className="input" id={title} type="number" placeholder="0" value={value} onChange={(e) => handleChange(e)} />
       <button className="submit-button color-dark-gray medium" type="submit" onClick={(e) => handleSubmit(e, id)}>+</button>
     </div>
   );
