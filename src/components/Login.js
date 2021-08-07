@@ -36,12 +36,14 @@ const Login = () => {
       {redirect}
       {error}
       <form>
+        <h6 className="m-b-10 color-gray">Enter your username</h6>
         <input className="field m-b-20 background-blue color-white" id="name" type="text" placeholder="username" />
+        <h6 className="m-b-10 color-gray">Enter your password</h6>
         <input className="field m-b-20 background-blue color-white" id="password" type="password" placeholder="password" />
         {validatePassword}
-        <input className="login-btn background-gray m-b-30" type="submit" value={submitValue} onClick={(e) => handleSubmit(e)} />
+        <input className="login-btn color-white background-dark-blue m-b-30" type="submit" value={submitValue} onClick={(e) => handleSubmit(e)} />
       </form>
-      <p>or </p>
+      <p>or</p>
       {link}
     </div>
   );

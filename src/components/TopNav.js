@@ -1,6 +1,6 @@
 const Nav = () => (
-  <div className="background-blue nav fixed">
-    <h1 className="color-white title bold large">BodyMonitor</h1>
+  <div className="background-dark-blue fw-900 m-b-30 nav fixed">
+    <h1 className="color-white title bold">BodyMonitor</h1>
   </div>
 );
 

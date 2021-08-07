@@ -1,13 +1,13 @@
 const icons = {
-  Weight: 'fas fa-weight-hanging',
+  Weight: 'fas fa-weight',
   Energy: 'fas fa-bolt',
-  'Energy burned': 'fas fa-fire',
-  Fats: 'fas fa-tint',
-  'Saturated fats': 'fas fa-bacon',
-  Water: 'fas fa-water',
-  Sugar: 'fas fa-cubes',
-  Carbonhydrates: 'fas fa-bread-slice',
-  Protein: 'fas fa-egg',
+  'Energy burned': 'fas fa-fire-alt',
+  Fats: 'fas fa-burn',
+  'Saturated fats': 'fas fa-adjust',
+  Water: 'fas fa-tint',
+  Sugar: 'fas fa-stroopwafel',
+  Carbonhydrates: 'fas fa-hamburger',
+  Protein: 'fas fa-drumstick-bite',
 };
 
 const measurementUnits = {

@@ -8,9 +8,9 @@ const Footer = () => {
 
   return (
     <footer className="flex fixed footer">
-      <Icon icon="fas fa-plus-square" path="/add" title="Add Measure." />
+      <Icon icon="fas fa-plus" path="/add" title="Add Measurement" />
       <Icon icon="fas fa-home" path="/" title="Home" />
-      <Icon icon="fas fa-weight" path="/progress" title="Progress" />
+      <Icon icon="fas fa-tasks" path="/progress" title="Progress" />
       <Icon icon="fas fa-sign-out-alt" path="/users/login" title="Logout" clickIconHandler={handleLogout} />
     </footer>
   );

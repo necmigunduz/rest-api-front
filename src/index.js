@@ -5,6 +5,8 @@ import { createStore } from 'redux';
 import App from './App';
 import rootReducer from './reducers/rootReducer';
 import './index.css';
+import './assets/reset.css';
+import './assets/styles.css';
 
 const initialState = {
   units: [],

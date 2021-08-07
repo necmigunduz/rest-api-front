@@ -10,8 +10,8 @@ const Icon = (props) => {
   const routePath = location.pathname.split('/')[1];
 
   const nowActive = () => {
-    if (`/${routePath}` === path) return 'green';
-    return 'red';
+    if (`/${routePath}` === path) return 'blue';
+    return 'dark-blue';
   };
   const active = nowActive();
   return (
