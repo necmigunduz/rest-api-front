@@ -4,7 +4,7 @@
 
 Body monitor is a full-stack app. A user can create measures for monitoring nutritional intakes and weight values. 
 
-![screenshot](Screenshot)
+![screenshot](https://github.com/necmigunduz/rest-api-front/blob/rest-api-front/Screenshot.png)
 
 Link for the backend: [here](https://github.com/necmigunduz/rest-api-back)
 
