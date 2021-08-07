@@ -1,0 +1,99 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Card renders correctly 1`] = `
+<div
+  className="add-card flex space-between align-center m-b-20 p-l-10 p-r-10"
+>
+  <div
+    className="color-gray medium input-title flex"
+  >
+    CardTitle
+  </div>
+  <input
+    className="input"
+    id="CardTitle"
+    onChange={[Function]}
+    placeholder="0"
+    type="number"
+    value="50"
+  />
+  <button
+    className="submit-button color-dark-gray medium"
+    onClick={[Function]}
+    type="submit"
+  >
+    +
+  </button>
+</div>
+`;
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="flex fixed footer"
+>
+  <a
+    className="icon background-dark-blue color-white"
+    href="/add"
+    onClick={[Function]}
+  >
+    <div>
+      <div
+        className="fas fa-plus big"
+      />
+      <div
+        className="small m-top-10"
+      >
+        Add Measurement
+      </div>
+    </div>
+  </a>
+  <a
+    className="icon background-dark-blue color-white"
+    href="/"
+    onClick={[Function]}
+  >
+    <div>
+      <div
+        className="fas fa-home big"
+      />
+      <div
+        className="small m-top-10"
+      >
+        Home
+      </div>
+    </div>
+  </a>
+  <a
+    className="icon background-dark-blue color-white"
+    href="/progress"
+    onClick={[Function]}
+  >
+    <div>
+      <div
+        className="fas fa-tasks big"
+      />
+      <div
+        className="small m-top-10"
+      >
+        Progress
+      </div>
+    </div>
+  </a>
+  <a
+    className="icon background-dark-blue color-white"
+    href="/users/login"
+    onClick={[Function]}
+  >
+    <div>
+      <div
+        className="fas fa-sign-out-alt big"
+      />
+      <div
+        className="small m-top-10"
+      >
+        Logout
+      </div>
+    </div>
+  </a>
+</footer>
+`;
