@@ -1,32 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Card renders correctly 1`] = `
-<div
-  className="add-card flex space-between align-center m-b-20 p-l-10 p-r-10"
->
-  <div
-    className="color-gray medium input-title flex"
-  >
-    CardTitle
-  </div>
-  <input
-    className="input"
-    id="CardTitle"
-    onChange={[Function]}
-    placeholder="0"
-    type="number"
-    value="50"
-  />
-  <button
-    className="submit-button color-dark-gray medium"
-    onClick={[Function]}
-    type="submit"
-  >
-    +
-  </button>
-</div>
-`;
-
 exports[`Footer renders correctly 1`] = `
 <footer
   className="flex fixed footer"
