@@ -4,7 +4,7 @@
 
 Body monitor is a full-stack app. A user can create measures for monitoring nutritional intakes and weight values. 
 
-![screenshot](./docs/healthify.png)
+![screenshot](Screenshot)
 
 Link for the backend: [here](https://github.com/necmigunduz/rest-api-back)
 
@@ -24,7 +24,7 @@ Link for the backend: [here](https://github.com/necmigunduz/rest-api-back)
 To run the tests: 
 - `npm test`
 
-## [LiveVersion](https://tracking-rest-api-back.herokuapp.com/)
+## [LiveVersion](https://rest-api-front.herokuapp.com/)
 
 ## Author
 
