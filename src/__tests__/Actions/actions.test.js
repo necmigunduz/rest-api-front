@@ -1,6 +1,6 @@
 import actions, {
   getUnits, getAllMeasurements, addValue, changeDate, changeFilter,
-} from '../actions/index';
+} from '../../actions/index';
 
 const {
   GET_UNITS, GET_MEASUREMENTS, ADD_VALUE, CHANGE_DATE, CHANGE_FILTER,
