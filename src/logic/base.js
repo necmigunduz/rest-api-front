@@ -1,3 +1,3 @@
-const baseURL = 'http://body-monitor-api.herokuapp.com/';
+const baseURL = 'https://body-monitor-api.herokuapp.com/';
 
 export default baseURL;
