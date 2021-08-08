@@ -45,6 +45,6 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- To Microverse for their `README` template.
+- To Microverse for their `README` template
 
 ## 📝 [License](https://creativecommons.org/licenses/by-nc-nd/4.0/)
