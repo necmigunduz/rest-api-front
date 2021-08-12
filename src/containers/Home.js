@@ -16,6 +16,7 @@ const HomePage = (props) => {
   useEffect(() => {
     const token = loadToken();
     fetchAllMeasurements(token).then((measurements) => {
+      console.log(measurements);
       getAllMeasurements(measurements);
     });
 
