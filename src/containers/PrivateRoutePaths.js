@@ -1,4 +1,9 @@
-import { Redirect, Route } from 'react-router-dom';
+import {
+  Redirect,
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { nowLoggedin } from '../sessions/sessions';
@@ -19,42 +24,46 @@ const PrivateRoutePaths = (props) => {
   if (authorized) {
     routes = (
       <>
-        <Route
-          exact
-          path="/"
-          render={() => (
-            <Home
-              measurements={measurements}
-              getAllMeasurements={getAllMeasurements}
-              date={date}
-              changeDate={changeDate}
+        <Router>
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={() => (
+                <Home
+                  measurements={measurements}
+                  getAllMeasurements={getAllMeasurements}
+                  date={date}
+                  changeDate={changeDate}
+                />
+              )}
             />
-          )}
-        />
-        <Route
-          exact
-          path="/add"
-          render={() => (
-            <AddMeasurement
-              units={units}
-              values={values}
-              getUnits={getUnits}
-              addValue={addValue}
+            <Route
+              exact
+              path="/add"
+              render={() => (
+                <AddMeasurement
+                  units={units}
+                  values={values}
+                  getUnits={getUnits}
+                  addValue={addValue}
+                />
+              )}
             />
-          )}
-        />
-        <Route
-          exact
-          path="/progress"
-          render={() => (
-            <Prog
-              measurements={measurements}
-              getAllMeasurements={getAllMeasurements}
-              filter={filter}
-              changeFilter={changeFilter}
+            <Route
+              exact
+              path="/progress"
+              render={() => (
+                <Prog
+                  measurements={measurements}
+                  getAllMeasurements={getAllMeasurements}
+                  filter={filter}
+                  changeFilter={changeFilter}
+                />
+              )}
             />
-          )}
-        />
+          </Switch>
+        </Router>
       </>
     );
   } else {

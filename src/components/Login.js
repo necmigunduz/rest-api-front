@@ -23,18 +23,18 @@ const Login = () => {
     const rPassword = e.target.parentElement[2].value;
     if (signUp && password !== rPassword) return;
     const response = await login(name, password, endpoint);
-    if (response.auth_token) {
-      saveToken(response.auth_token);
+    if (response.token) {
+      saveToken(response.token);
       setRedirect(<Redirect to={{ pathname: '/' }} />);
     } else {
-      setError(<div className="m-b-20">{response.error}</div>);
+      setError(<div className="m-b-20">{response.message}</div>);
     }
   };
 
   return (
     <div className="login text-center">
       {redirect}
-      {error}
+      <span>{error}</span>
       <form>
         <h6 className="m-b-10 color-gray">Enter your username</h6>
         <input className="field m-b-20 background-blue color-white" id="name" type="text" placeholder="username" />
