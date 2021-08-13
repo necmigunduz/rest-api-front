@@ -16,10 +16,8 @@ const HomePage = (props) => {
   useEffect(() => {
     const token = loadToken();
     fetchAllMeasurements(token).then((measurements) => {
-      console.log(measurements);
       getAllMeasurements(measurements);
     });
-
     const today = new Date();
     const day = today.getDate();
     const month = today.getMonth();

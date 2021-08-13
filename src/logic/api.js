@@ -33,7 +33,6 @@ const fetchAllMeasurements = async (token) => {
     },
   })
     .then((e) => e.json());
-  console.log(response);
   return response.data;
 };
 

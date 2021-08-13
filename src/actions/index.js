@@ -17,7 +17,7 @@ const getUnits = (units) => (
 const getAllMeasurements = (measurements) => (
   {
     type: GET_MEASUREMENTS,
-    payload: measurements,
+    measurements,
   }
 );
 
