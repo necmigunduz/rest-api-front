@@ -23,12 +23,10 @@ const Login = () => {
     const rPassword = e.target.parentElement[2].value;
     if (signUp && password !== rPassword) return;
     const response = await login(name, password, endpoint);
-    console.log(response);
     if (response) {
       saveToken(response);
       setRedirect(<Redirect to={{ pathname: '/' }} />);
     } else {
-      console.log('-------', response.token);
       setError(<div className="m-b-20">{response.message}</div>);
     }
   };
