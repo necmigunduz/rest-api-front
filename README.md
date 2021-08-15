@@ -21,7 +21,7 @@ Link for the backend: [here](https://github.com/necmigunduz/rest-api-back)
 - `npm install`
 - `npm run start`
 
-To run the tests: 
+To run the tests
 - `npm test`
 
 ## [LiveVersion](https://rest-api-front.herokuapp.com/)
