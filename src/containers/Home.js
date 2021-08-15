@@ -54,7 +54,7 @@ const Home = (props) => {
       />
     ));
   } else {
-    main = <span>No measuerements entry found</span>;
+    main = <span className="m-auto body m-big">No measuerements entry found!</span>;
   }
 
   return (

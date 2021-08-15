@@ -9,9 +9,14 @@ const MainInfo = (props) => {
   return (
     <div className="main-info">
       <p className="big m-b-10 color-dark-gray">{total}</p>
-      <i className={`${icons[unit]} x-small color-gray`} />
-      <p className="small color-gray">{unit}</p>
-      <p className="x-small color-gray">{measurementUnits[unit]}</p>
+      <i className={`${icons[unit]} m-big color-gray`} />
+      <p className="small color-gray">
+        {unit}
+        <span className="x-small">
+          /
+          {measurementUnits[unit]}
+        </span>
+      </p>
     </div>
   );
 };

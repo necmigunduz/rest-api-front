@@ -184,6 +184,10 @@ body {
   margin-right: 10px;
 }
 
+.m-auto {
+  margin: auto;
+}
+
 .p-t-10 {
   padding-top: 10px;
 }
