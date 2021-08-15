@@ -37,10 +37,10 @@ const Home = (props) => {
     measurementsByDate = getMeasurementsByDate(measurements[0], date);
     measurementsByDate.forEach((e) => {
       if (nutrients[e.title]) {
-        nutrients[e.title].total += e.value;
+        nutrients[e.title].total += Number(e.value);
       } else {
         nutrients[e.title] = { ...e };
-        nutrients[e.title].total = e.value;
+        nutrients[e.title].total = Number(e.value);
       }
     });
     Object.keys(nutrients).map((nutrient) => mainInfo.push(nutrients[nutrient]));
@@ -53,6 +53,8 @@ const Home = (props) => {
         total={m.total}
       />
     ));
+  } else {
+    main = <span>No measuerements entry found</span>;
   }
 
   return (
