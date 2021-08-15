@@ -1,3 +1,3 @@
-const baseURL = 'http://localhost:3001';
+const baseURL = 'https://body-monitor-api.herokuapp.com/';
 
 export default baseURL;
