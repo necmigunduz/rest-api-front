@@ -15,8 +15,7 @@ const AddMeasurement = (props) => {
     });
   }, []);
 
-  const handleSubmit = (unit, id) => {
-    const value = values[unit];
+  const handleSubmit = (unit, id, value) => {
     const token = loadToken();
     saveMeasurements(id, value, token);
     addValue(unit, '');

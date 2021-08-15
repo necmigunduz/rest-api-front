@@ -24,19 +24,24 @@ const Prog = (props) => {
     changeFilter(e.target.value);
   };
 
-  const list = measurements[filter].map((m) => {
-    if (m.value === 0) return [];
-    const date = new Date(m.created_at);
-    const day = date.getDate();
-    const month = date.getMonth() || 0;
-    const year = date.getFullYear();
-    return (
-      <div className="m-b-10" key={`p${m.id}`}>
-        <p className="color-dark-gray medium">{`${day} ${months[month].full} ${year}`}</p>
-        <p className="color-gray small">{`${m.value} (${measurementUnits[filter]})`}</p>
-      </div>
-    );
-  });
+  let list = [];
+  let filtered = [];
+  if (measurements[0]) {
+    filtered = measurements[0].filter((m) => m.title === filter);
+    list = filtered.map((m) => {
+      if (m.value === 0) return [];
+      const date = new Date(m.created_at);
+      const day = date.getDate();
+      const month = date.getMonth() || 0;
+      const year = date.getFullYear();
+      return (
+        <div className="m-b-10" key={`p${m.id}`}>
+          <p className="color-dark-gray medium">{`${day} ${months[month].full} ${year}`}</p>
+          <p className="color-gray small">{`${m.value} (${measurementUnits[filter]})`}</p>
+        </div>
+      );
+    });
+  }
 
   return (
     <div className="p-l-20 p-r-20 progress">

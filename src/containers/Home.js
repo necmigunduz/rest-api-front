@@ -3,11 +3,10 @@ import PropTypes from 'prop-types';
 import { fetchAllMeasurements } from '../logic/api';
 import { loadToken } from '../localStorage/storage';
 import MainInfo from '../components/Info';
-import Nutrient from '../components/Nutrients';
 import newDate, { getMonths } from '../leapYear/leapYear';
-import { getMeasurementsByDate, total, last } from '../logic/measurements';
+import { getMeasurementsByDate } from '../logic/measurements';
 
-const HomePage = (props) => {
+const Home = (props) => {
   const {
         measurements, getAllMeasurements, date, changeDate, //eslint-disable-line
   } = props;
@@ -30,38 +29,31 @@ const HomePage = (props) => {
     changeDate({ day, month, year });
   };
 
-  const [mainInfo, list] = Object.keys(measurements).reduce(([m, l], key) => {
-    const main = ['Weight', 'Energy', 'Energy burned'].includes(key);
-    const result = main
-      ? [[...m, { title: key, measurements: measurements[key] }], l]
-      : [m, [...l, { title: key, measurements: measurements[key] }]];
-    return result;
-  }, [[], []]);
-
-  const main = mainInfo.map((e) => {
-    const reduceMethod = e.title === 'Weight' ? last : total;
-    return (
+  const mainInfo = [];
+  let main = [];
+  const nutrients = {};
+  let measurementsByDate = [];
+  if (measurements[0]) {
+    measurementsByDate = getMeasurementsByDate(measurements[0], date);
+    measurementsByDate.forEach((e) => {
+      if (nutrients[e.title]) {
+        nutrients[e.title].total += e.value;
+      } else {
+        nutrients[e.title] = { ...e };
+        nutrients[e.title].total = e.value;
+      }
+    });
+    Object.keys(nutrients).map((nutrient) => mainInfo.push(nutrients[nutrient]));
+    main = mainInfo.map((m) => (
       <MainInfo
-        key={e.title}
-        unit={e.title}
-        measurements={e.measurements}
+        key={m.title}
+        unit={m.title}
+        measurements={mainInfo}
         selectedDate={date}
-        getMeasurementsByDate={getMeasurementsByDate}
-        reduceMethod={reduceMethod}
+        total={m.total}
       />
-    );
-  });
-
-  const nutrient = list.map((e) => (
-    <Nutrient
-      key={e.title}
-      unit={e.title}
-      measurements={e.measurements}
-      selectedDate={date}
-      getMeasurementsByDate={getMeasurementsByDate}
-      reduceMethod={total}
-    />
-  ));
+    ));
+  }
 
   return (
     <div>
@@ -74,15 +66,12 @@ const HomePage = (props) => {
         <div className="info-wrapper m-t-30 flex">
           {main}
         </div>
-        <div className="nutrient-wrapper m-t-30 flex wrap center">
-          {nutrient}
-        </div>
       </div>
     </div>
   );
 };
 
-HomePage.propTypes = {
+Home.propTypes = {
   measurements: PropTypes.shape({}).isRequired,
   getAllMeasurements: PropTypes.func.isRequired,
   date: PropTypes.shape({
@@ -93,4 +82,4 @@ HomePage.propTypes = {
   changeDate: PropTypes.func.isRequired,
 };
 
-export default HomePage;
+export default Home;

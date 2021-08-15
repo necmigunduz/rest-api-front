@@ -1,5 +1,5 @@
 const saveToken = (token) => {
-  localStorage.token = JSON.stringify(token);
+  localStorage.token = JSON.stringify(token.auth_token);
 };
 
 const loadToken = () => {

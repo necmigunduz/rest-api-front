@@ -3,14 +3,12 @@ import { icons, measurementUnits } from '../filters/filters';
 
 const MainInfo = (props) => {
   const {
-    unit, measurements, getMeasurementsByDate, reduceMethod, selectedDate,
+    unit, total,
   } = props;
-  const measurementsByDate = getMeasurementsByDate(measurements, selectedDate);
-  const displayedValue = reduceMethod(measurementsByDate);
 
   return (
     <div className="main-info">
-      <p className="big m-b-10 color-dark-gray">{displayedValue}</p>
+      <p className="big m-b-10 color-dark-gray">{total}</p>
       <i className={`${icons[unit]} x-small color-gray`} />
       <p className="small color-gray">{unit}</p>
       <p className="x-small color-gray">{measurementUnits[unit]}</p>
@@ -20,10 +18,7 @@ const MainInfo = (props) => {
 
 MainInfo.propTypes = {
   unit: PropTypes.string.isRequired,
-  measurements: PropTypes.arrayOf(PropTypes.object).isRequired,
-  getMeasurementsByDate: PropTypes.func.isRequired,
-  reduceMethod: PropTypes.func.isRequired,
-  selectedDate: PropTypes.shape({}).isRequired,
+  total: PropTypes.number.isRequired,
 };
 
 export default MainInfo;

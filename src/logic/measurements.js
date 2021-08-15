@@ -12,7 +12,7 @@ const getMeasurementsByDate = (measurements, date) => {
 
 const total = (measurements) => {
   const total = measurements.reduce((value, measure) => {
-    const nValue = measure.value + value;
+    const nValue = parseInt(measure.value, 10) + parseInt(value, 10);
     return nValue;
   }, 0);
   return total;

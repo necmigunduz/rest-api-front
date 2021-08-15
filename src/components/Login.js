@@ -23,7 +23,8 @@ const Login = () => {
     const rPassword = e.target.parentElement[2].value;
     if (signUp && password !== rPassword) return;
     const response = await login(name, password, endpoint);
-    if (response) {
+
+    if (response.auth_token !== undefined) {
       saveToken(response);
       setRedirect(<Redirect to={{ pathname: '/' }} />);
     } else {

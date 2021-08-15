@@ -12,7 +12,6 @@ const fetchUnits = async (token) => {
 };
 
 const saveMeasurements = async (id, value, token) => {
-  const data = { value };
   fetch(`${baseURL}/units/${id}/measurements`, {
     mode: 'cors',
     method: 'POST',
@@ -21,7 +20,7 @@ const saveMeasurements = async (id, value, token) => {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(data),
+    body: JSON.stringify({ value }),
   });
 };
 
