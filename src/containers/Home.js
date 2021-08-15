@@ -65,7 +65,7 @@ const Home = (props) => {
         <button className="color-gray" type="button" onClick={() => handleDateChange(1)}>&gt;</button>
       </div>
       <div className="p-l-20 p-r-20">
-        <div className="info-wrapper m-t-30 flex">
+        <div className="info-wrapper m-t-30 flex wrap">
           {main}
         </div>
       </div>

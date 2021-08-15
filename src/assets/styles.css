@@ -131,6 +131,7 @@ body {
 .main-info {
   width: 33%;
   text-align: center;
+  padding: 30px;
 }
 
 .nutrient {
